@@ -108,14 +108,8 @@ if os.system('Cscript "C:\\Windows\\System32\\Printing_Admin_Scripts\\fr-FR\\Prn
 else:
     print("\n • L'imprimante Brother MFC-J4540DW Printer n'a pas pu être installée !")
     print("\n • Une erreur est survenue !")
-
-wipe(5)
-
-if os.system('RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Brother MFC-J4540DW Printer"') == 0:
-    print("\n • Imprimante Brother MFC-J4540DW Printer : sélectionnée par défaut !")
-else:
-    print("\n • L'imprimante Brother MFC-J4540DW Printer n'a pas pu être mis par défaut !")
-    print("\n • Une erreur est survenue !")
+    os.system('echo Erreur d\'installation de l\'imprimante Brother MFC-J4540DW, merci de contacter le service informatique à l\'adresse suivante : informatique@ecoris.fr')
+    exit()
 
 wipe(5)
 
@@ -128,6 +122,14 @@ if os.system('Cscript "C:\\Windows\\System32\\Printing_Admin_Scripts\\fr-FR\\prn
     else:
         print("\n • Impossible de sélectionner \"Échelle de gris\"")
         print("\n • Une erreur est survenue !")
+        
+    wipe(5)
+
+    if os.system('RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Imprimante RDC Break"') == 0:
+        print("\n • Imprimante Brother MFC-J4540DW Printer : sélectionnée par défaut !")
+    else:
+        print("\n • L'imprimante Brother MFC-J4540DW Printer n'a pas pu être mis par défaut !")
+        print("\n • Une erreur est survenue !")
 else:
     print("\n • Impossible de renommer l'imprimante MFC-J4540DW en Imprimante RDC Break")
     print("\n • Une erreur est survenue !")
@@ -138,15 +140,25 @@ else:
     else:
         print("\n • Impossible de sélectionner \"Échelle de gris\"")
         print("\n • Une erreur est survenue !")
+        
+    wipe(5)
 
+    if os.system('RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Brother MFC-J4540DW Printer"') == 0:
+        print("\n • Imprimante Brother MFC-J4540DW Printer : sélectionnée par défaut !")
+    else:
+        print("\n • L'imprimante Brother MFC-J4540DW Printer n'a pas pu être mis par défaut !")
+        print("\n • Une erreur est survenue !")
 
 wipe(5)
 
 if os.system('del %userprofile%\\Desktop\\Pilotes-MFCJ4540DW.7z') == 0 :
     print("\n • L'archive contenant les pilotes a été supprimés !")
 else:
-    print("\n • Impossible de supprimer l'archive contenant les pilotes")
-    print("\n • Une erreur est survenue !")
+    if Path(os.environ['USERPROFILE']+'\\Desktop\\Pilotes-MFCJ4540DW.7z').is_file():
+        print("\n • Impossible de supprimer l'archive contenant les pilotes")
+        print("\n • Une erreur est survenue !")
+    else:
+        print("\n • L'archive contenant les pilotes a été supprimés !")
 
 wipe(5)
 
