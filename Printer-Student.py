@@ -121,9 +121,24 @@ wipe(5)
 
 if os.system('Cscript "C:\\Windows\\System32\\Printing_Admin_Scripts\\fr-FR\\prncnfg.vbs" -z "Imprimante RDC Break" -x -p "Brother MFC-J4540DW Printer"') == 0:
     print("\n • Imprimante Brother MFC-J4540DW Printer renommé en Imprimante RDC Break !")
+    wipe(5)
+
+    if os.system('powershell.exe "Set-PrintConfiguration -PrinterName \'Imprimante RDC Break\' -Color $False"') == 0:
+        print("\n • Échelle de gris sélectionnée !")
+    else:
+        print("\n • Impossible de sélectionner \"Échelle de gris\"")
+        print("\n • Une erreur est survenue !")
 else:
     print("\n • Impossible de renommer l'imprimante MFC-J4540DW en Imprimante RDC Break")
     print("\n • Une erreur est survenue !")
+    wipe(5)
+
+    if os.system('powershell.exe "Set-PrintConfiguration -PrinterName \'Brother MFC-J4540DW Printer\' -Color $False"') == 0:
+        print("\n • Échelle de gris sélectionnée !")
+    else:
+        print("\n • Impossible de sélectionner \"Échelle de gris\"")
+        print("\n • Une erreur est survenue !")
+
 
 wipe(5)
 
