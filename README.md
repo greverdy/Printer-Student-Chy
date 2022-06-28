@@ -22,6 +22,8 @@ $ git clone https://github.com/greverdy/Printer-Student-Chy.git
 $ cd Printer-Student-Chy
 # Lancer l'application
 $ Printer-Student-Chy.exe
+# Suppression du dossier
+$ cd .. && rmdir /s /q Printer-Student-Chy
 ```
 > **Note**
 > Installation avec cmd. [Pilotes MFC-J4540DW à télécharger !](https://www.brother.fr/services-et-supports/mfc-j4540dw/downloads)
