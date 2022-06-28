@@ -5,20 +5,20 @@
 
 # Printer-Student-Chy
 
-L'exectable "Printer-Student-Chy.exe" vous permettra d'installer l'imprimante située au BREAK du RDC à Ecoris Chambéry.<br>
+L'exécutable "Printer-Student-Chy.exe" vous permettra d'installer l'imprimante située au BREAK du RDC à Ecoris Chambéry.<br>
 Code source disponible dans l'archive.<br>
 Script compilé à l'aide du module : <a href='https://pypi.org/project/auto-py-to-exe/' target="_blank">AUTO-PY-TO-EXE</a>.
 
 ## How To Use
 > **Note**
-> Vous pouvez simplement télécharger le répertoire et lancer l'excutable.
+> Vous pouvez simplement télécharger le répertoire et lancer l'exécutable.
 
 > **Note**
 > Installation avec téléchargement de l'archive.
 ```bash
-# Cloner ce repertoire
+# Cloner ce répertoire
 $ git clone https://github.com/greverdy/Printer-Student-Chy.git
-# Aller dans le repertoire
+# Aller dans le répertoire
 $ cd Printer-Student-Chy
 # Lancer l'application
 $ Printer-Student-Chy.exe
@@ -42,7 +42,7 @@ $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\prncnfg.vbs" -z "Imp
 
 ## TroubleShooting
 
-- Systèmes d'exploitations supportés : Windows ;
+- Systèmes d'exploitation supportés : Windows ;
 - Merci de vérifier que vous êtes bien sur le réseau : CAMPUS-ECORIS ;
 - Merci de vérifier que l'imprimante est bien allumée ;
 - [Aide Microsoft](https://support.microsoft.com/fr-fr/windows/installer-une-imprimante-dans-windows-cc0724cf-793e-3542-d1ff-727e4978638b#ID0EBD=Windows_10)
