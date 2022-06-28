@@ -45,5 +45,5 @@ $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\prncnfg.vbs" -z "Imp
 - Systèmes d'exploitations supportés : Windows ;
 - Merci de vérifier que vous êtes bien sur le réseau : CAMPUS-ECORIS ;
 - Merci de vérifier que l'imprimante est bien allumée ;
-- <a href="mailto:informatique@ecoris.fr?subject=Problème pour se connecter à l'imprimante | Break RDC&body= --- Merci de détailler au mieux votre demande pour que nous puissions vous aider au plus vite ---" target="_blank"> Autres problèmes ➡ mail à : informatique@ecoris.fr </a>
 - [Aide Microsoft](https://support.microsoft.com/fr-fr/windows/installer-une-imprimante-dans-windows-cc0724cf-793e-3542-d1ff-727e4978638b#ID0EBD=Windows_10)
+- <a href="mailto:informatique@ecoris.fr?subject=Problème pour se connecter à l'imprimante | Break RDC&body= --- Merci de détailler au mieux votre demande pour que nous puissions vous aider au plus vite ---" target="_blank"> Signaler une erreur / Autres problèmes ➡ mail à : informatique@ecoris.fr </a>
