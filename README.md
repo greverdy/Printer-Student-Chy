@@ -38,6 +38,9 @@ $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\Prnmngr.vbs" -a -p "
 $ RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Brother MFC-J4540DW Printer"
 # Renommage de l'imprimante
 $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\prncnfg.vbs" -z "Imprimante RDC Break" -x -p "Brother MFC-J4540DW Printer"
+# Impression en Noir et blanc / Echelle de gris [Commande PowerShell]
+$ Set-PrintConfiguration -PrinterName "Imprimante RDC Break" -Color $False
+$ Set-PrintConfiguration -PrinterName "Brother MFC-J4540DW Printer" -Color $False
 ```
 
 ## TroubleShooting
