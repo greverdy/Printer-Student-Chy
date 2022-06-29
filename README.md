@@ -34,13 +34,16 @@ $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\Prnport.vbs" -a -r 1
 $ cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\prndrvr.vbs" -a -m "Brother MFC-J4540DW Printer" -i "<path to folder>\gdi\BRPRI19C.INF"
 # Installation de l'imprimante
 $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\Prnmngr.vbs" -a -p "Brother MFC-J4540DW Printer" -m "Brother MFC-J4540DW Printer" -r 192.168.12.9
-# Configuration : Imprimante par défaut
-$ RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Brother MFC-J4540DW Printer"
 # Renommage de l'imprimante
 $ Cscript "C:\Windows\System32\Printing_Admin_Scripts\fr-FR\prncnfg.vbs" -z "Imprimante RDC Break" -x -p "Brother MFC-J4540DW Printer"
-# Impression en Noir et blanc / Echelle de gris [Commande PowerShell]
-$ Set-PrintConfiguration -PrinterName "Imprimante RDC Break" -Color $False
-$ Set-PrintConfiguration -PrinterName "Brother MFC-J4540DW Printer" -Color $False
+# Impression en Noir et blanc / Echelle de gris
+$ powershell.exe "Set-PrintConfiguration -PrinterName 'Imprimante RDC Break' -Color $False"
+# ou [si l'imprimante n'a pas été rénommée]
+$ powershell.exe "Set-PrintConfiguration -PrinterName 'Brother MFC-J4540DW Printer' -Color $False"
+# Configuration : Imprimante par défaut
+$ RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Imprimante RDC Break"
+# ou [si l'imprimante n'a pas été rénommée]
+$ RUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n "Brother MFC-J4540DW Printer"
 ```
 
 ## TroubleShooting
