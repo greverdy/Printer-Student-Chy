@@ -18,10 +18,13 @@ Script compilé à l'aide du module : <a href='https://pypi.org/project/auto-py-
 ```bash
 # Cloner ce répertoire
 $ git clone https://github.com/greverdy/Printer-Student-Chy.git
+
 # Aller dans le répertoire
 $ cd Printer-Student-Chy
+
 # Lancer l'application
 $ Printer-Student-Chy.exe
+
 # Suppression du dossier
 $ cd .. && rmdir /s /q Printer-Student-Chy
 ```
